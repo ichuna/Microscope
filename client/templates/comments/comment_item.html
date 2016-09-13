@@ -3,7 +3,11 @@
     <h4>
       <span class="author">{{author}}</span>
       <span class="date">on {{submittedText}}</span>
+        {{#if currentUser}}<a href="{{pathFor 'commentEdit'}}">Edit</a>
+        <a class="btn btn-danger delete" href="{{pathFor 'commentiItem'}}#">Delete comment</a>{{/if}}
     </h4>
+    <p>{{_id}}</p>
     <p>{{body}}</p>
+    <p>{{zy}}</p>
   </li>
 </template>

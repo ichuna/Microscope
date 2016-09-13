@@ -1,0 +1,21 @@
+<template name="commentEdit">
+    <form class="main form page">
+        <div class="form-group {{errorClass 'body'}}">
+            <label class="control-label" for="body">body</label>
+            <div class="controls">
+                <input name="body" id="body" type="text" value="{{body}}" placeholder="Your body" class="form-control" />
+                <span class="help-block">{{errorMessage 'body'}}</span>
+            </div>
+        </div>
+        <div class="form-group {{errorClass 'zy'}}">
+            <label class="control-label" for="zy">zy</label>
+            <div class="controls">
+                <input name="zy" id="zy" type="text" value="{{zy}}" placeholder="Name your comment" class="form-control" />
+                <span class="help-block">{{errorMessage 'zy'}}</span>
+            </div>
+        </div>
+        <input type="submit" value="Submit" class="btn btn-primary submit" />
+        <hr/>
+        <a class="btn btn-danger delete" href="#">Delete comment</a>
+    </form>
+</template>
